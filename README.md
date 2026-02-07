@@ -1,6 +1,6 @@
-# SpentWise - Personal Expense Tracker
+# BudgetTracker - Personal Expense Tracker
 
-SpentWise is a modern, responsive React application designed to help users track their personal finances. Record income and expenses, categorize spending, and visualize financial habits with interactive charts.
+BudgetTracker is a modern, responsive React application designed to help users track their personal finances. Record income and expenses, categorize spending, and visualize financial habits with interactive charts.
 
 ## Features
 
