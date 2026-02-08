@@ -3,6 +3,15 @@ import { useExpenses } from '../../context/ExpenseContext';
 import { Trash2, Filter, Search, Calendar } from 'lucide-react';
 import { format } from 'date-fns';
 
+// ✅ Currency formatter utility
+const formatCurrency = (amount: number) => {
+  return new Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "INR",
+    minimumFractionDigits: 2
+  }).format(amount);
+};
+
 const TransactionList: React.FC = () => {
   const { transactions, deleteTransaction } = useExpenses();
   const [searchTerm, setSearchTerm] = useState('');
@@ -82,7 +91,7 @@ const TransactionList: React.FC = () => {
                   <td className={`px-4 py-4 text-right font-bold ${
                     t.type === 'income' ? 'text-green-600' : 'text-slate-900'
                   }`}>
-                    {t.type === 'income' ? '+' : '-'}${t.amount.toLocaleString(undefined, { minimumFractionDigits: 2 })}
+                    {t.type === 'income' ? '+' : '-'}{formatCurrency(t.amount)}
                   </td>
                   <td className="px-4 py-4 text-center">
                     <button
