@@ -35,7 +35,7 @@ const App: React.FC = () => {
         </main>
 
         <footer className="py-6 border-t border-slate-200 text-center text-slate-400 text-sm mt-12 bg-white">
-          <p>© {new Date().getFullYear()} SpentWise Personal Expense Tracker. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} BudgetTracker|Personal Expense Tracker. All rights reserved.</p>
         </footer>
       </div>
     </ExpenseProvider>
